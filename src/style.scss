@@ -1,0 +1,12 @@
+
+@import "~bootstrap/scss/bootstrap";
+@import '../src/variables.scss';
+@import url('https://fonts.google.com/specimen/Open+Sans?selection.family=Open+Sans:400,600,800');
+
+body {
+  // TODO - replace the inline color with a SCSS variable from ./variables.scss
+  background: $light-gray;
+  font-family: 'Open Sans', sans-serif !important;
+
+}
+

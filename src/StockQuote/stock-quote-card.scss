@@ -1,0 +1,130 @@
+// TODO - add styles for the stockQuoteCard
+@import '../variables';
+
+//Stock specific variables
+%stock-positive {
+  background-color: $bright-green;
+}
+%stock-negative {
+  background-color: $bright-red;
+}
+%stock-even {
+  background-color: $light-gray;
+}
+%stock-label {
+  color: $light-gray;
+  font-size: 12px;
+  padding-left: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  position:absolute; 
+}
+%stock-vertical-line{
+  @extend %vertical-line;
+  @extend %border-image;
+}
+
+//Stock Specific classes
+.stock-quote-card {
+  display: flex;
+  margin: 5px;
+  background: white;
+  min-height: 105px;
+
+  p {
+    margin-bottom: 0;
+  }
+
+  h3 {
+    font-size: 1.1em;
+    color: $dark-blue;
+    text-transform: uppercase;
+    margin-bottom: 0;
+  }
+}
+
+.card-left {
+  width: 80px;
+  display:flex;
+  position: relative;
+}
+
+.card-right {
+  flex-grow: 1;
+  padding: 10px;
+}
+.stock-even{
+  @extend %stock-even;
+}
+.stock-positive-container{
+  @extend %stock-positive;
+  width: 80px;
+}
+.stock-negative-container{
+  @extend %stock-negative;
+  width: 80px;
+
+}
+.stock-negative-color{
+  color: $bright-red
+}
+.stock-positive-color{
+  color: $bright-green
+}
+.stock-positive-vertical-line{
+  @extend %stock-positive;
+  @extend %stock-vertical-line;
+}
+.stock-negative-vertical-line{
+  @extend %stock-negative;
+  @extend %stock-vertical-line;
+}
+.stock-label-bottom{
+  @extend %stock-label;
+  bottom:0;
+}
+.stock-label-top{
+  @extend %stock-label;
+  top:0;
+}
+
+.stock-arrow-right {
+  width: 0;
+  height: 10px;
+  margin-left: 18px;
+  border-top: 8px solid transparent;
+  border-bottom: 6px solid transparent;
+  border-left: 6px solid #f5f5f5;
+  position: absolute;
+  margin-top:10px
+}
+.stock-small-arrow{
+  width: 10px;
+  height: 10px;
+}
+.stock-symbol-label {
+  font-size: 0.8em;
+  text-transform: uppercase;
+  line-height: .7em;
+  color: $charcoal;
+}
+
+.stock-price {
+  font-size: 1.3em;
+  color: $dark-blue;
+  margin-top: 5px;
+
+  span {
+    font-size: .7em;
+  }
+}
+
+
+.stock-recent-performance {
+  color: $charcoal;
+  font-size: .7em;
+
+  span {
+    margin-right: 5px;
+  }
+}

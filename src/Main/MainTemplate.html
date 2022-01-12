@@ -1,0 +1,20 @@
+<div class="container mt-5">
+    <div class="row">
+        <h1 class="page-header mt-1 mb-4">Stock Watcher</h1>
+    </div>
+    <div class="row stock-search-container">
+        <div class="col-6 col-lg-4">
+            <div class="form-group">
+                <input id="stock-search-input" type="text" placeholder="Enter Stock Symbol" class="form-control">
+                <div id="stock-error" class="d-none"> <h5 class=" mb-4">Please enter a symbol</h5>
+                </div>
+            </div>
+        </div>
+        <div class="col-6 col-lg-8">
+            <button id="stock-search-button" class="btn btn-primary">ADD STOCK</button>
+        </div>
+    </div>
+    <div class="row stock-results-container d-flex">
+        <div id="stock-quotes" class="stock-quotes-container row w-100"></div>
+    </div>
+</div>

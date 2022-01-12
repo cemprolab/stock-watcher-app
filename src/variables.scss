@@ -1,0 +1,27 @@
+$light-gray: #f5f5f5;
+$charcoal: #696969;
+$dark-blue: #404261;
+
+$bright-green: #5fd05f;
+$bright-red: #FF3110;
+
+%border-image{
+    -webkit-border-image: 
+    -webkit-gradient(linear, 0 0, 0 100%, from($light-gray), to(rgba(0, 0, 0, 0))) 1 100%;
+  -webkit-border-image: 
+    -webkit-linear-gradient($light-gray, rgba(0, 0, 0, 0)) 1 100%;
+  -moz-border-image:
+    -moz-linear-gradient($light-gray, rgba(0, 0, 0, 0)) 1 100%;    
+  -o-border-image:
+    -o-linear-gradient($light-gray, rgba(0, 0, 0, 0)) 1 100%;
+  border-image:linear-gradient(to bottom, $light-gray, rgba(0, 0, 0, 0)) 1 100%;
+  }
+  
+    %vertical-line{
+    height: 80%;
+    border-width: 3px;
+    border-right: 3px solid;
+    width: 0%;
+    align-content: center;
+    margin: 10px 25px;
+    }

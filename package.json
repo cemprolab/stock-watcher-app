@@ -1,0 +1,32 @@
+{
+  "name": "stock-watcher-app",
+  "version": "1.0.0",
+  "description": "",
+  "private": true,
+  "scripts": {
+    "start": "webpack serve --open",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "backbone": "1.4.0",
+    "backbone.marionette": "3.0.0",
+    "bootstrap": "^4.6.0",
+    "jquery": "^3.6.0",
+    "node-sass": "^6.0.1",
+    "underscore": "^1.13.1"
+  },
+  "devDependencies": {
+    "css-loader": "^5.2.7",
+    "html-loader": "^2.1.2",
+    "html-webpack-plugin": "^5.5.0",
+    "postcss-loader": "^6.1.1",
+    "sass-loader": "^12.1.0",
+    "style-loader": "^3.1.0",
+    "webpack": "^5.44.0",
+    "webpack-cli": "^4.7.2",
+    "webpack-dev-server": "^3.11.2"
+  }
+}

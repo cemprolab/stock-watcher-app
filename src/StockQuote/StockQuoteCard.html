@@ -1,0 +1,65 @@
+<div class="stock-quote-card">
+
+    <div class="card-left d-none d-sm-flex">
+
+            <% if (this.isStockPositive(change)) { %>
+                <div class="stock-positive-container ">
+                    <div class="stock-arrow-right" style="margin-top: <%- this.stockArrowLocation(high, low, price) %>"></div>
+                    <div class="stock-positive-vertical-line">
+                        <label class="stock-label-top"> <%- this.formatMoney(high, false) %></label>
+                        <label class="stock-label-bottom"> <%- this.formatMoney(low, false) %></label>
+                    </div>
+                </div>
+
+            <% } %>
+            <% if (!this.isStockPositive(change)) { %>
+                <div class="stock-negative-container">
+                    <div class="stock-arrow-right" style="margin-top: <%- this.stockArrowLocation(high, low, price) %>"></div>
+                    <div class="stock-negative-vertical-line">
+                        <label class="stock-label-top"> <%- this.formatMoney(high, false) %></label>
+                        <label class="stock-label-bottom"> <%- this.formatMoney(low, false) %></label>
+                    </div>
+
+                </div>
+
+            <% } %>
+    </div>
+    <div class="card-right">
+        <div class="row">
+            <div class="col-6 col-sm-12">
+                <h3><%- name %></h3>
+                <p class="stock-symbol-label"><%- symbol %></p>
+            </div>
+            <div class="col-6 col-sm-12">
+                <p class="stock-price xs-right"><%- this.formatMoney(price) %>
+                    <span>
+                   <% if (this.isStockPositive(change)) { %>
+                       <div class="stock-positive-color xs-right">
+                           <img src='/assets/arrow-up.svg' class="stock-small-arrow"/>
+                           <%- this.formatMoney(change) %> (<%- changePercent %>)
+                      </div>
+                  <% } %>
+                   <% if (!this.isStockPositive(change)) { %>
+                        <div class="stock-negative-color xs-right">
+                           <img src='/assets/arrow-down.svg' class="stock-small-arrow" />
+                            <%- this.formatMoney(change) %> (<%- changePercent %>)
+                       </div>
+                   <% } %>
+       
+                   </span>
+               </p>
+            </div>
+        </div>
+        
+
+
+
+
+
+        <p class="stock-recent-performance d-none d-sm-flex">
+            <span>OPEN <%- this.formatMoney(open) %></span>
+            <span>HIGH <%- this.formatMoney(high) %></span>
+            <span>LOW <%- this.formatMoney(low) %></span>
+        </p>
+    </div>
+</div>
